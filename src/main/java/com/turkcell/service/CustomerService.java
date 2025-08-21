@@ -18,8 +18,16 @@ public class CustomerService {
            return;
 
         customerRepository.save(customer);
+
         System.out.println("Müşteri başarıyla eklendi");
     }
+
+    public void search(String name){
+
+      customerRepository.search(name);
+    }
+
+
 
 
 }
