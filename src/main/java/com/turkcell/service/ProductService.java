@@ -17,7 +17,7 @@ public class ProductService {
             return;
 
        productRepository.save(product);
-        System.out.println("Ürün başarıyla eklendi");
+        System.out.println("Ürün başarıyla eklendi : " + product.getName());
     }
 
     public void stockControl(String name){

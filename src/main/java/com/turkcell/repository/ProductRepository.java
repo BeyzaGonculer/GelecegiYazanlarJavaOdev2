@@ -16,22 +16,23 @@ public class ProductRepository implements IRepository<Product>{
     }
 
     public int stockControl(String name){
-
         int productCount = 0;
-        for (Product product : products){
+        boolean found = false;
 
+        for (Product product : products){
             String productName = product.getName().toLowerCase();
             if(productName.equals(name.toLowerCase())){
                 System.out.println("Ürün stok sayısı: " + product.getStock());
                 productCount = product.getStock();
+                found = true;
                 break;
             }
-            else{
-                System.out.println("Stoklarda ürün bulunamadı");
-                productCount = 0;
-
-            }
         }
+
+        if (!found) {
+            System.out.println("Stoklarda ürün bulunamadı");
+        }
+
         return productCount;
     }
 
@@ -39,32 +40,23 @@ public class ProductRepository implements IRepository<Product>{
 
         int productCount = 0;
         for (Product product : products){
-
-
             if(product.getId() == id){
                 //System.out.println("Ürün stok sayısı: " + product.getStock());
                 productCount = product.getStock();
                 break;
             }
-
             else {
                 System.out.println("Stoklarda ürün bulunamadı");
-                productCount = 0;
             }
         }
-
         return productCount;
     }
-
-    public boolean isProduct(int id) {
-
+    public Product findById(int productId){
         for (Product product : products) {
-            if (product.getId() == id) {
-                return true;
+            if (product.getId() == productId) {
+                return product;
             }
-
         }
-        return false;
-
+        return null;
     }
 }

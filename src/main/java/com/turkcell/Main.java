@@ -26,25 +26,22 @@ public class Main {
         OrderRepository orderRepository = new OrderRepository();
         OrderService orderService = new OrderService(orderRepository, customerRepository, productRepository);
 
-
         Customer customer = new Customer();
-
         customer.setId(1);
         customer.setName("Beyza");
         customer.setEmail("beyza@gmail.com");
         customer.setPhone("123456789");
 
         Customer customer2 = new Customer();
-
-        customer.setId(2);
-        customer.setName("Buse");
-        customer.setEmail("buse@gmail.com");
-        customer.setPhone("123456789");
+        customer2.setId(2);
+        customer2.setName("Buse");
+        customer2.setEmail("buse@gmail.com");
+        customer2.setPhone("123456789");
 
         customerService.add(customer);
+        customerService.add(customer2);
         customerService.search("Beyza");
         customerService.search("Buse");
-
 
         Product product = new Product();
         product.setId(1);
@@ -53,14 +50,15 @@ public class Main {
         product.setStock(50);
 
         Product product2 = new Product();
-        product.setId(2);
-        product.setName("Apple");
-        product.setPrice(10.00);
-        product.setStock(40);
+        product2.setId(2);
+        product2.setName("apple");
+        product2.setPrice(10.00);
+        product2.setStock(40);
 
         productService.add(product);
+        productService.add(product2);
         productService.stockControl("orange");
-        productService.stockControl("elma");
+        productService.stockControl("apple");
 
         List<OrderItem> orderItems = new ArrayList<>();
         List<OrderItem> orderItems2 = new ArrayList<>();
@@ -77,14 +75,7 @@ public class Main {
         orderItems.add(item4);
         orderItems2.add(item5);
 
-
-
-        Order order = new Order();
-
-        orderService.add(orderItems, customer, product);
-        orderService.add(orderItems2, customer2, product2);
-
-
-
+        orderService.add(orderItems, customer);
+        orderService.add(orderItems2, customer2);
     }
 }
