@@ -24,3 +24,7 @@ Kullanıcı arama işlemini gerçekleştirir.
 ## Order Service
 - ***public void add(List<OrderItem> orderItemList, Customer customer);***
 Sipariş oluşturma işlemini gerçekleştirir.
+
+
+<img width="416" height="514" alt="image" src="https://github.com/user-attachments/assets/6222be82-4c6d-447c-9518-921ed94a8e6e" />
+
