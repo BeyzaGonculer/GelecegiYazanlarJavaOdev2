@@ -1,24 +1,24 @@
 # Fonksiyonlar 
 
 ***Customer Service***
-1 )  public void add(Customer customer);
+- 1)  public void add(Customer customer);
 Kullanıcı ekleme işlemini gerçekleştirir. 
 
-2 ) public void search(String name);
+- 2) public void search(String name);
 Kullanıcı arama işlemini gerçekleştirir.
 
 
  ***Product Service***
-1 ) public void add(Product product);
+- 1) public void add(Product product);
 Ürün ekleme işlemini gerçekleştirir.
  
-2 ) public void stockControl(String name);
+- 2) public void stockControl(String name);
 Ürün stok kontrol işlemini name değişkeni üzerinden gerçekleştirir.
 
-3) public int stockControl(int id);
+- 3) public int stockControl(int id);
 Ürün stok kontrol işlemini id değişkeni üzerinden gerçekleştirir.
 
-4)public Product findById(int productId)
+- 4) public Product findById(int productId)
 Ürünü productId değerine göre bulan yardımcı fonksiyon.
 
 
