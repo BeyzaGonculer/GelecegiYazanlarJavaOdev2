@@ -1,6 +1,6 @@
 # Fonksiyonlar 
 
-***Customer Service***
+## Customer Service
 - 1)  public void add(Customer customer);
 Kullanıcı ekleme işlemini gerçekleştirir. 
 
