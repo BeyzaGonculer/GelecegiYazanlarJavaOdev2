@@ -23,5 +23,5 @@ Kullanıcı arama işlemini gerçekleştirir.
 
 
  ***Order Service***
-1 ) public void add(List<OrderItem> orderItemList, Customer customer)
+- 1) public void add(List<OrderItem> orderItemList, Customer customer)
 Sipariş oluşturma işlemini gerçekleştirir.
