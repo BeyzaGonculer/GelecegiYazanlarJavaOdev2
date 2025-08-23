@@ -1,4 +1,4 @@
-***Fonksiyonlar*** 
+# Fonksiyonlar 
 
 ***Customer Service***
 1 )  public void add(Customer customer);
